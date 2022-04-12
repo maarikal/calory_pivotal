@@ -60,7 +60,7 @@ const ItemCtrl =(function () {
             }
             // calories to number
             calories = parseInt(calories);
-            // create new item
+            // create new meal with calories
             newItem = new Item(ID, name, calories);
             // add to items array
             data.items.push(newItem);
@@ -177,7 +177,7 @@ const App = (function (ItemCtrl,  StrorageCtrl, UICtrl) {
         }
         event.preventDefault()
     }
-    // get items from storage
+    // get meals and calories from storage
     const getItemsFromStorage = function() {
         //get items from storage
         const items = StorageCtrl.getItemsFromStorage()
